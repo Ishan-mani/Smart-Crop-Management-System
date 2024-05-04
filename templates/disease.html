@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style>
+  html body {
+    background-color: rgb(206, 206, 228);
+  }
+
+  .buddy {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overlayed {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Add some padding for better appearance */
+    border-radius: 25px;
+    color: white;
+    overflow: hidden; /* Ensure content does not overflow */
+    transition: height 0.5s; /* Smooth transition for height change */
+  }
+
+  .form-signin button {
+    margin-bottom: 20px;
+  }
+
+  #output-image {
+    margin-bottom: 20px;
+    display: none; /* Initially hide the image */
+  }
+</style>
+
+<section class="buddy">
+  <div class="overlayed" id="overlayed">
+    <div class="card-container">
+
+      <h2 style="color: white;">
+        <b>Find out which disease has been caught by your plant</b>
+      </h2>
+
+      <form class="form-signin" method=post enctype=multipart/form-data>
+
+        <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+        <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)">
+        <br>
+        <img id="output-image" class="rounded mx-auto d-block" />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image');
+      output.src = reader.result;
+      output.style.display = 'block'; // Show the image
+      document.getElementById('overlayed').style.height = '70%'; // Adjust height after adding image
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+</script>
+
+{% endblock %}

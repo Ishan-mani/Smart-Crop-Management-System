@@ -1,0 +1,195 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- banner -->
+<section class="banner_w3lspvt" id="home">
+	<div class="csslider infinity" id="slider1">
+	
+				<div class="banner-top">
+					<div class="overlay">
+						<div class="container">
+							<div class="w3layouts-banner-info text-center">
+								<h3 class="text-wh">Farmify</h3>
+								<h4 class="text-wh mx-auto my-4"><b>Get informed decisions about your farming strategy.</b></h4>
+								<br>
+								<h4 class="text-wh mx-auto my-4"><strong> Here are some questions we'll answer</strong></h4>
+								<p class="text-li mx-auto mt-2">
+									1. What crop to plant here? <br>
+									2. What fertilizer to use? <br>
+									3. Which disease do your crop have?<br>
+									4. How to cure the disease?</p>
+							</div>
+						</div>
+					</div>
+				</div>
+	</div>
+</section>
+<!-- //banner -->
+
+<!-- core values -->
+
+
+</style>
+{% set background_image_url = url_for('static', filename='images/core.jpg') %}
+
+<section class=" aboutus about-section" style="background-image: url('{{ background_image_url }}'); background-size: cover; background-position: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="overlay">
+                    <div class="w3layouts-banner-info text-center">
+                        <h3 class="text-wh" style="font-size: 48px;">About Us</h3>
+                        <h4 class="text-wh mx-auto my-4" style="font-size: 30px;"><b>Improving Agriculture, Improving Lives, Cultivating Crops To Make Farmers Increase Profit.</b></h4>
+                        <br>
+                        <p class="text-li mx-auto mt-2" style="font-size: 24px;">We use state-of-the-art machine learning and deep learning technologies to help you guide through the entire farming process. Make informed decisions to understand the demographics of your area, understand the factors that affect your crop and keep them healthy for a super awesome successful yield.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- //core values -->
+
+<!-- Products & Services -->
+<style>
+    .blog-item {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px; /* Add some space between items */
+    }
+
+    .blog-item:hover .img-fluid {
+        transform: scale(1.1); /* Scale up the image on hover */
+        transition: transform 0.3s ease; /* Smooth transition */
+    }
+
+    .blog-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+        color: white;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease; /* Smooth transition */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px; /* Add padding to the content */
+    }
+
+    .blog-item:hover .blog-info {
+        opacity: 1; /* Show the info on hover */
+    }
+
+    .blog-info h4,
+    .blog-info p {
+        text-align: center;
+        color: white; /* Set text color to white */
+    }
+	.blog-item h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background color */
+        padding: 10px 20px; /* Add padding */
+        border-radius: 5px; /* Optional: Add border radius for rounded corners */
+        color: white; /* Set text color to white */
+        z-index: 1; /* Ensure h2 is above the image */
+        opacity: 1; /* Initially visible */
+        transition: opacity 0.3s ease; /* Smooth transition */
+    }
+
+    .blog-item:hover h2 {
+        opacity: 0; /* Hide the h2 on hover */
+    }
+
+	.blog-item .img-fluid {
+    max-width: 100%; /* Ensure image stays within its container */
+    height: 300px; /* Adjust the height as needed */
+
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline styles */
+    
+}
+.blog {
+    background: linear-gradient(to bottom, #333333, #000000); /* Adjust colors as needed */
+}
+
+
+</style>
+
+<section class=" serv blog py-5">
+    <div class="container py-md-5">
+        <h3 class="heading mb-sm-5 mb-4 text-center" style="color: white;"> Our Services</h3>
+        <div class="row blog-grids">
+            <div class="col-lg-4 col-md-6 blog-item mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+				<h2>Crop</h2>
+                <div class="blog-info">
+                    <h4>Crop</h4>
+                    <p class="mt-2"> Recommendation about the type of crops to be cultivated which is best suited for the respective conditions</p>
+                </div>
+                <img src="{{ url_for('static', filename='images/s3.jpg') }}" class="img-fluid" alt="" />
+                <a href="{{ url_for('crop_recommend') }}" class="blog-info">
+                    <div class="blog-info">
+                        <h4>Crop</h4>
+                        <p class="mt-2"> Recommendation about the type of crops to be cultivated which is best suited for the respective conditions</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Add more blog items here -->
+            <div class="col-lg-4 col-md-6 blog-item mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+				<h2>Fertilizer</h2>
+                <div class="blog-info">
+                    <h4>Fertilizer</h4>
+                    <p class="mt-2">Recommendation about the type of fertilizer best suited for the particular soil and the recommended crop</p>
+                </div>
+                <img src="{{ url_for('static', filename='images/s2.jpg') }}" class="img-fluid" alt="" />
+                <a href="{{ url_for('fertilizer_recommendation') }}" class="blog-info">
+                    <div class="blog-info">
+                        <h4>Fertilizer</h4>
+                        <p class="mt-2">Recommendation about the type of fertilizer best suited for the particular soil and the recommended crop</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 blog-item mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+				<h2>Disease</h2>
+                <div class="blog-info">
+                    <h4>Crop Disease</h4>
+                    <p class="mt-2">Predicting the name and causes of crop disease and suggestions to cure it</p>
+                </div>
+                <img src="{{ url_for('static', filename='images/s4.jpg') }}" class="img-fluid" alt="" />
+                <a href="{{ url_for('disease_prediction') }}" class="blog-info">
+                    <div class="blog-info">
+                        <h4>Crop Disease</h4>
+                        <p class="mt-2">Predicting the name and causes of crop disease and suggestions to cure it</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- //Products & Services -->
+
+
+<!-- Creating custom grid and hover effect
+<section>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="images/s2.jpg" alt="">
+        <div class="overlay">
+           <h2>Hover effect 1</h2>
+           <a class="info" href="#">link here</a>
+        </div>
+    </div>
+</div> -->
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+open folder then Cmd
+
+
+1
+conda create -n Farmify python=3.6.12
+
+2
+conda activate Farmify
+
+3. 
+pip install -r requirements.txt
+
+4.
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
+
+5.
+
+pip install torch==1.7.0 torchvision==0.8.1 torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+
+
+6.
+(Farmify) C:\Users\KIIT\project8thsem>cd Farmify
+
+(Farmify) C:\Users\KIIT\project8thsem\Farmify>python app.py
+python app.py

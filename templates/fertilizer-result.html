@@ -1,0 +1,18 @@
+{% extends 'layout.html' %} 
+{% block body %}
+
+{% set background_image_url = url_for('static', filename='images/fertilizer.jpg') %}
+
+<section class="boddy" style="background-image: url('{{ background_image_url }}'); background-size: cover; background-position: center;">
+  <div class="container py-5 mx-auto"> <!-- Adjusted padding here -->
+    <div class="row">
+        <div class="col-sm py-2 py-md-3">
+            <div class="card card-body" style="justify-content: center; background-color: blanchedalmond;">
+                <p class="text-center" style="color: black; font-size: 20px;">{{ recommendation }}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

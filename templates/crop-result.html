@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+  
+  /*
+  
+  
+   */
+  h1 {
+    font-size: 42px;
+  }
+  .container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+    padding: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .card img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cardword {
+  flex: 1;
+  margin-left: 20px;
+}
+</style>
+
+<section class="bdy">
+<div class="container1">
+  <div class="card">
+
+    {% if crop_image_path %}
+    <img src="{{ crop_image_path }}" alt="Crop Image" class="img-fluid">
+    {% endif %}
+    <div class="cardword">
+      <h1 style="color: black;">You should grow <u>{{ prediction }}</u> in your farm</h1>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}
+
+

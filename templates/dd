@@ -1,0 +1,188 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+    /* Custom flat design style for headings */
+    .flat-heading {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c3e50; /* Dark blue color */
+        background-color: #ecf0f1; /* Light grey background */
+        padding: 10px 20px; /* Padding around the text */
+        border-radius: 8px; /* Rounded corners */
+        display: inline-block; /* Display as inline block */
+        margin-bottom: 20px; /* Bottom margin for spacing */
+        text-transform: uppercase; /* Convert text to uppercase */
+        letter-spacing: 1px; /* Adjust letter spacing */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    }
+
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .containers {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between; /* Space between sections and image */
+    }
+
+    .content-containers {
+        width: 70%; /* Take up 70% of the container width */
+        margin-right: 20px; /* Add right margin for spacing */
+    }
+
+    .img-containers {
+        width: 30%; /* Take up 30% of the container width */
+        align-self: flex-start; /* Align to the start (top) of the container */
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    h2, h3 {
+        cursor: pointer;
+        font-weight: bold;
+        color: #CCCCCC; /* Light grey color for headings */
+    }
+
+    p {
+        color: #DDDDDD; /* Light grey color for paragraphs */
+    }
+
+    .section-content {
+        display: none;
+    }
+
+    .section-content div {
+        margin-bottom: 20px;
+    }
+
+    .section-content h3 {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .section-content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .img-containers img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%; /* Make the image round */
+    }
+
+    .cdyy {
+        background: url('../images/Black-Abstract-HD-Wallpaper.jpg') no-repeat center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        background-attachment: fixed; /* Keep the background fixed */
+        background-position: center top 40px; /* Move background down by 40px */
+    }
+</style>
+
+<div class="containers cdyy">
+    <div class="content-containers">
+        <h1 class="mt-5">Frequently Asked Questions (FAQ)</h1>
+
+        <!-- Fertilizer Section -->
+        <section class="mt-5">
+            <h2 onclick="toggleSection('fertilizer')" class="flat-heading">Fertilizer</h2>
+            <div id="fertilizer" class="mt-4 section-content">
+                <!-- Fertilizer content here -->
+                <div>
+                    <h3>1. How does your fertilizer prediction system work?</h3>
+                    <p>Our system utilizes advanced algorithms and data analysis techniques to predict the optimal type and amount of fertilizer needed for your specific crops based on factors such as soil type, weather conditions, and crop requirements.</p>
+                </div>
+                <div>
+                    <h3>2. How accurate is your fertilizer prediction system?</h3>
+                    <p>Our system has been extensively validated and tested, achieving high levels of accuracy in predicting fertilizer needs for various crops and growing conditions. However, it's essential to consider that agricultural practices and conditions may vary, so periodic calibration and adjustment may be necessary for optimal results.</p>
+                </div>
+                <div>
+                    <h3>3. Can your system help me save on fertilizer costs?</h3>
+                    <p>Yes, our system is designed to optimize fertilizer usage by providing tailored recommendations, which can help minimize over-application and reduce unnecessary expenses on fertilizers. By applying the right amount of fertilizer at the right time, you can improve resource efficiency and maximize crop yields.</p>
+                </div>
+                <div>
+                    <h3>4. Does your system take environmental factors into account?</h3>
+                    <p>Absolutely. Our system considers environmental sustainability by recommending fertilizer applications that minimize negative impacts such as nutrient runoff and leaching. By promoting precision application and nutrient management practices, we aim to help farmers reduce their environmental footprint and protect natural resources.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crop Section -->
+        <section class="mt-5">
+            <h2 onclick="toggleSection('crop')" class="flat-heading">Crop</h2>
+            <div id="crop" class="mt-4 section-content">
+                <!-- Crop content here -->
+                <div>
+                    <h3>1. How can I determine the best time to plant my crops?</h3>
+                    <p>The best time to plant crops depends on various factors such as the type of crop, local climate conditions, soil quality, and expected rainfall. It's recommended to consult local agricultural extension services or use crop prediction models to determine the optimal planting window for specific crops in your region.</p>
+                </div>
+                <div>
+                    <h3>2. What are some common pests and diseases that affect crops, and how can I prevent them?</h3>
+                    <p>Common pests and diseases that affect crops include aphids, fungi, bacteria, and viruses. To prevent them, farmers can practice crop rotation, use pest-resistant crop varieties, implement integrated pest management (IPM) techniques, and maintain proper sanitation practices in the field.</p>
+                </div>
+                <div>
+                    <h3>3. How can I improve soil fertility for better crop yields?</h3>
+                    <p>Soil fertility can be improved by adding organic matter such as compost or manure, using cover crops to prevent soil erosion and improve soil structure, applying balanced fertilizers based on soil test results, and practicing conservation tillage methods to minimize soil disturbance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disease Section -->
+        <section class="mt-5">
+            <h2 onclick="toggleSection('disease')" class="flat-heading">Disease</h2>
+            <div id="disease" class="mt-4 section-content">
+                <!-- Disease content here -->
+                <div>
+                    <h3>1. How does your plant disease prediction system benefit farmers?</h3>
+                    <p>Our system utilizes advanced algorithms to analyze environmental factors, crop conditions, and historical data to predict the likelihood of plant diseases. By providing early warnings, farmers can take proactive measures to protect their crops, minimize losses, and optimize yields.</p>
+                </div>
+                <div>
+                    <h3>2. Is your plant disease prediction system accurate?</h3>
+                    <p>Yes, our system has undergone rigorous testing and validation, achieving high levels of accuracy in predicting plant diseases across various crops and regions. While no system is perfect, our technology significantly enhances disease detection and management efforts.</p>
+                </div>
+                <div>
+                    <h3>3. What types of plant diseases can your system predict?</h3>
+                    <p>Our system can predict a wide range of plant diseases, including fungal, bacterial, and viral infections, as well as other common ailments such as nutrient deficiencies and physiological disorders. By analyzing multiple factors, we offer comprehensive disease forecasting for various crops.</p>
+                </div>
+                <div>
+                    <h3>4. How can farmers integrate your plant disease prediction system into their practices?</h3>
+                    <p>Integrating our system is simple. Farmers can visit our website, input relevant information about their crops and fields, and receive personalized disease risk assessments and management recommendations. Our user-friendly interface makes it easy to access and utilize our technology.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Image Container -->
+    <div class="img-containers">
+        <img src="{{ url_for('static', filename='images/faqpic.png') }}" class="img-fluid" alt="Profile Image">
+    </div>
+</div>
+
+<script>
+    function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section.style.display === 'none') {
+            section.style.display = 'block'; // Show section content
+        } else {
+            section.style.display = 'none'; // Hide section content
+        }
+    }
+</script>
+
+{% endblock %}

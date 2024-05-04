@@ -1,0 +1,309 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- Banner -->
+<!-- <section class="banner_w3lspvt" id="home">
+    <div class="csslider infinity" id="slider1">
+        <div class="banner-top">
+            <div class="overlay">
+                <div class="container">
+                    <div class="w3layouts-banner-info text-center">
+                        <h3 class="text-wh">Contact Us</h3>
+                        Add your contact information here -->
+                        <!-- <p class="text-li mx-auto mt-2">
+                            Address: Your Address <br>
+                            Phone: Your Phone Number <br>
+                            Email: Your Email Address
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- //Banner -->
+
+
+<!-- 
+<section class="blog py-5">
+	<div class="container py-md-5">
+		<h3 class="heading mb-sm-5 mb-4 text-center"> Our Services</h3>
+		<div class="row blog-grids">
+			<div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+				<img src="{{ url_for('static', filename='images/s3.jpg') }}" class="img-fluid" alt="" />
+				<a href="{{ url_for('crop_recommend') }}">
+					<div class="blog-info">
+
+						<h4>Crop</h4>
+
+						<p class="mt-2"> Recommendation about the type of crops to be cultivated which is best suited
+							for the respective conditions</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+				<img src="{{ url_for('static', filename='images/s2.jpg') }}" class="img-fluid" alt="" />
+				<a href="{{ url_for('fertilizer_recommendation') }}">
+					<div class="blog-info">
+						<h4>Fertilizer</h4>
+						<p class="mt-2">Recommendation about the type of fertilizer best suited for the particular soil
+							and the recommended crop</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
+
+				<img src="{{ url_for('static', filename='images/s4.jpg') }}" class="img-fluid" alt=""> -->
+
+<!-- <img src="images/s4.jpg" class="img-fliud" alt="" /> -->
+<!-- <a href="{{ url_for('disease_prediction') }}">
+					<div class="blog-info">
+						<h4>Crop Disease</h4>
+						<p class="mt-2">Predicting the name and causes of crop disease and suggestions to cure it</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section> -->
+<style>
+
+    .requirements-section {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        --blue: #007bff;
+        --indigo: #6610f2;
+        --purple: #6f42c1;
+        --pink: #e83e8c;
+        --red: #dc3545;
+        --orange: #fd7e14;
+        --yellow: #ffc107;
+        --green: #28a745;
+        --teal: #20c997;
+        --cyan: #17a2b8;
+        --white: #fff;
+        --gray: #6c757d;
+        --gray-dark: #343a40;
+        --primary: #007bff;
+        --secondary: #6c757d;
+        --success: #28a745;
+        --info: #17a2b8;
+        --warning: #ffc107;
+        --danger: #dc3545;
+        --light: #f8f9fa;
+        --dark: #343a40;
+        --breakpoint-xs: 0;
+        --breakpoint-sm: 576px;
+        --breakpoint-md: 768px;
+        --breakpoint-lg: 992px;
+        --breakpoint-xl: 1200px;
+        --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+        box-sizing: border-box;
+        display: block;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        background-color: black;
+        color: white;
+    }
+
+    .prakhar,
+    .Ishan,.Ashutosh,.Arpitya,.Sthanu,.Ashish {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        --blue: #007bff;
+        --indigo: #6610f2;
+        --purple: #6f42c1;
+        --pink: #e83e8c;
+        --red: #dc3545;
+        --orange: #fd7e14;
+        --yellow: #ffc107;
+        --green: #28a745;
+        --teal: #20c997;
+        --cyan: #17a2b8;
+        --white: #fff;
+        --gray: #6c757d;
+        --gray-dark: #343a40;
+        --primary: #007bff;
+        --secondary: #6c757d;
+        --success: #28a745;
+        --info: #17a2b8;
+        --warning: #ffc107;
+        --danger: #dc3545;
+        --light: #f8f9fa;
+        --dark: #343a40;
+        --breakpoint-xs: 0;
+        --breakpoint-sm: 576px;
+        --breakpoint-md: 768px;
+        --breakpoint-lg: 992px;
+        --breakpoint-xl: 1200px;
+        --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.5;
+        color: #212529;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        text-align: center !important;
+    }
+    .us{
+            background: linear-gradient(to bottom, #333333, #000000); /* Adjust colors as needed */
+
+    }
+</style>
+
+{% set background_image_url = url_for('static', filename='images/1.jpg') %}
+
+<section class=" aboutteam about-section"
+    style="background-image: url('{{ background_image_url }}'); background-size: cover; background-position: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="overlay">
+                    <div class="w3layouts-banner-info text-center">
+                        <h3 class="text-wh" style="font-size: 48px;">About our Team</h3>
+                        <h4 class="text-wh mx-auto my-4" style="font-size: 30px;"><b>Improving Agriculture, Improving
+                                Lives, Cultivating Crops To Make Farmers Increase Profit.</b></h4>
+                        <br>
+                        <p class="text-li mx-auto mt-2" style="font-size: 24px;">Our team, comprising individuals with
+                            diverse skills and backgrounds, collaborates to achieve goals within set timelines. Each
+                            member contributes unique strengths and expertise, fostering a positive team environment
+                            through effective leadership, communication, and mutual respect. Open dialogue, feedback,
+                            and continuous learning enhance overall performance. Adaptability and proactive issue
+                            resolution are crucial for success throughout the project lifecycle.
+                        </p>
+                        <div style="height: 70px;"></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="requirements-section pt-1 pb-1 pt-md-3 pb-md-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 style="color: white;">
+                People Behind This Project
+            </h2>
+            <h4 style="color: white;">
+                We are team alpha
+            </h4>
+        </div>
+    </div>
+</section>
+
+<section class=" us pt-12 pb-12">
+    <div class="container">
+        <div class="row mt-12">
+        </div>
+        <div class="row">
+            <div class=" prakhar col-md-4 text-center">
+                <img class="img-fluid qualities-img p-4 rounded-circle"
+                    src="{{ url_for('static', filename='images/Prakh.jpg') }}" class="img-fluid" alt="" />
+                <h5 >
+                    Prakhar Singh
+                </h5>
+                <p >
+                    <i>- 2029021</i>
+                </p>
+                <p >
+                    <i><a href="mailto:2029021@kiit.ac.in">- 2029021@kiit.ac.in</a></i>
+                </p>
+
+
+            </div>
+            <div class="Ishan col-md-4 text-center">
+                <!-- <img class="img-fluid qualities-img p-4 rounded-circle" src="{{ url_for('static', filename='imgs/your_image.jpg') }}" alt="Your Image"> -->
+                <img class="img-fluid qualities-img p-4 rounded-circle"
+                    src="{{ url_for('static', filename='images/Ishan Mani.jpg') }}" class="img-fluid" alt="" />
+
+                <h5>
+                    Ishan Mani Tripathi
+                </h5>
+                <p>
+                    <i>- 2029188</i>
+                </p>
+                <p>
+                    <i><a href="mailto:2029188@kiit.ac.in">- 2029188@kiit.ac.in</a></i>
+                </p>
+
+            </div>
+            <div class="Ashutosh col-md-4 text-center">
+
+                <img class="img-fluid qualities-img p-4 rounded-circle"
+                src="{{ url_for('static', filename='images/Ashutosh.jpg') }}" class="img-fluid" alt="" />
+            <h5>
+                Asutosh Kumar sandal
+
+                </h5>
+                <p>
+                    <i>- 2029010</i>
+                </p>
+                <p>
+                    <i><a href="mailto:2029010@kiit.ac.in">- 2029010@kiit.ac.in</a></i>
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-md-3">
+            <div class="Ashish col-md-4 text-center">
+                <img class="img-fluid qualities-img p-4 rounded-circle"
+                src="{{ url_for('static', filename='images/Ashish.jpg') }}" class="img-fluid" alt="" />
+            <h5 >
+                    Ashish sahay
+                </h5>
+                <p>
+                    <i>- 2029009</i>
+                </p>
+                <p>
+                    <i><a href="mailto:2029009@kiit.ac.in">- 2029009@kiit.ac.in</a></i>
+                </p>
+            </div>
+            <div class=" Sthanu col-md-4 text-center">
+                <img class="img-fluid qualities-img p-4 rounded-circle"
+                src="{{ url_for('static', filename='images/Sthanu.jpg') }}" class="img-fluid" alt="" />
+            <h5>
+                    Sthanu Pradhan
+
+                </h5>
+                <p>
+                    <i>- 2029035</i>
+                </p>
+                <p>
+                    <i><a href="mailto:2029035@kiit.ac.in">- 2029035@kiit.ac.in</a></i>
+                </p>
+            </div>
+            <div class="Arpitya col-md-4 text-center">
+                <img class="img-fluid qualities-img p-4 rounded-circle"
+                src="{{ url_for('static', filename='images/arpitya.png') }}" class="img-fluid" alt="" />
+                            <h5>
+                    Arpitya Kumar Singh
+                </h5>
+                <p>
+                    <i>- 2029007</i>
+                </p>
+                <p>
+                    <i> <a href="mailto:2029007@kiit.ac.in">- 2029007@kiit.ac.in</a></i>
+                </p>
+            </div>
+        </div>
+        <div class="dd" style="background-color: #000000;height: 20px;"></div>
+</section>
+<!-- //Contact Form -->
+{% endblock %}
